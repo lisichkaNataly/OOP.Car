@@ -2,54 +2,24 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Автомобили");
 
-        Car lada = new Car();
-        lada.brand = "Lada";
-        lada.model = "Granta";
-        lada.engineVolume = 1.7;
-        lada.color = "желтый";
-        lada.productionCountry = "Россия";
-        lada.productionYear = 2015;
+        Car lada = new Car("Lada", "Granta", 1.7, "желтый", 2015, "Россия");
         lada.car();
         System.out.println();
 
 
-        Car audi = new Car();
-        audi.brand = "Audi";
-        audi.model = "A8 50 L TDI quattro";
-        audi.engineVolume = 3.0;
-        audi.color = "черный";
-        audi.productionCountry = "Германия";
-        audi.productionYear = 2020;
+        Car audi = new Car("Audi", "A8 50 L TDI quattro", 3.0, "черный", 2020, "Германия");
         audi.car();
         System.out.println();
 
-        Car bmv = new Car();
-        bmv.brand = "BMW";
-        bmv.model = "Z8";
-        bmv.engineVolume = 3.0;
-        bmv.color = "черный";
-        bmv.productionCountry = "Германия";
-        bmv.productionYear = 2020;
+        Car bmv = new Car("BMV", "Z8", 3.0, "черный", 2020, "Германия");
         bmv.car();
         System.out.println();
 
-        Car kia = new Car();
-        kia.brand = "KIA";
-        kia.model = "Sportage 4-го поколения";
-        kia.engineVolume = 2.4;
-        kia.color = "красный";
-        kia.productionCountry = "Южная Корея";
-        kia.productionYear = 2018;
+        Car kia = new Car("KIA", "Sportage 4-го поколения",2.4, "красный", 2018, "Южная Корея");
         kia.car();
         System.out.println();
 
-        Car hyundai = new Car();
-        hyundai.brand = "Hyundai";
-        hyundai.model = "Avante";
-        hyundai.engineVolume = 1.6;
-        hyundai.color = "оранжевый";
-        hyundai.productionCountry = "Южная Корея";
-        hyundai.productionYear = 2016;
+        Car hyundai = new Car("Hyundai", "Avante", 1.6, "оранжевый", 2016, "Южная Корея");
         hyundai.car();
         System.out.println();
 
