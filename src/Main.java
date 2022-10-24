@@ -8,6 +8,8 @@ public class Main {
         lada.color = "желтый";
         lada.productionCountry = "Россия";
         lada.productionYear = 2015;
+        lada.car();
+        System.out.println();
 
 
         Car audi = new Car();
@@ -17,6 +19,8 @@ public class Main {
         audi.color = "черный";
         audi.productionCountry = "Германия";
         audi.productionYear = 2020;
+        audi.car();
+        System.out.println();
 
         Car bmv = new Car();
         bmv.brand = "BMW";
@@ -25,6 +29,29 @@ public class Main {
         bmv.color = "черный";
         bmv.productionCountry = "Германия";
         bmv.productionYear = 2020;
+        bmv.car();
+        System.out.println();
+
+        Car kia = new Car();
+        kia.brand = "KIA";
+        kia.model = "Sportage 4-го поколения";
+        kia.engineVolume = 2.4;
+        kia.color = "красный";
+        kia.productionCountry = "Южная Корея";
+        kia.productionYear = 2018;
+        kia.car();
+        System.out.println();
+
+        Car hyundai = new Car();
+        hyundai.brand = "Hyundai";
+        hyundai.model = "Avante";
+        hyundai.engineVolume = 1.6;
+        hyundai.color = "оранжевый";
+        hyundai.productionCountry = "Южная Корея";
+        hyundai.productionYear = 2016;
+        hyundai.car();
+        System.out.println();
+
 
 
     }
