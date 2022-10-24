@@ -9,6 +9,7 @@ public class Car {
 
     void car () {
         System.out.println("Автомобиль: " + brand + " " + model);
+        System.out.println("Объем двигателя: " + engineVolume + " л");
         System.out.println("Год выпуска: " + productionYear);
         System.out.println("Страна выпуска: " + productionCountry);
         System.out.println("Цвет: " + color);
