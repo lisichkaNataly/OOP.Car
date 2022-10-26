@@ -1,5 +1,7 @@
 import transport.Car;
 
+import java.time.LocalDate;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -20,6 +22,7 @@ public class Main {
                 2020,
                 "Германия");
         audi.setGears("Автомат");
+        audi.setKey(new Car.Key(true, true));
 
 
         Car bmv = new Car("BMV",
@@ -29,6 +32,9 @@ public class Main {
                 0,
                 "Германия");
         bmv.setSummerTyres(false);
+        bmv.setInsurance(new Car.Insurance(LocalDate.now(), 30_000, "748494726"));
+        bmv.getInsurance().checkExpireDate();
+        bmv.getInsurance().checkNumber();
 
 
         Car kia = new Car("KIA",
@@ -64,6 +70,12 @@ public class Main {
                 ", тип кузова: " + car.getTypeOfBody() +
                 ", регистрационный номер: " + car.getRegNumber() +
                 ", количество мест: " + car.getSeatCount() +
-                ", " + (car.isSummerTyres() ? "летняя" : "зимняя") + " резина");
+                ", " + (car.isSummerTyres() ? "летняя" : "зимняя") + " резина" +
+                ", " + (car.getKey().isWithoutKeyAccess() ? "безключевой доступ" : "ключевой доступ") +
+                ", " + (car.getKey().isRemoteRunEngine() ? "удаленный запуск" : "обычный запуск") +
+                ", номер страховки: " + car.getInsurance().getNumber() +
+                ", стоимость страховки: " + car.getInsurance().getCost() +
+                ", срок действия страховки: " + car.getInsurance().getExpireDate());
+
     }
 }
