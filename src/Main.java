@@ -1,3 +1,5 @@
+import transport.Car;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -8,13 +10,8 @@ public class Main {
                 "желтый",
                 2015,
                 "Россия");
-        System.out.println("марка автомобиля: " + lada.brand +
-                " Модель: " + lada.model +
-                " Объем двигателя " + lada.engineVolume +
-                " Цвет кузова: " + lada.color +
-                " Год выпуска: " + lada.productionYear +
-                " Страна производства: " + lada.productionCountry);
-
+        lada.setRegNumber("М640ЕС159");
+        System.out.println(lada.isCorrectRegNumber());
 
         Car audi = new Car("Audi",
                 "A8 50 L TDI quattro",
@@ -22,13 +19,7 @@ public class Main {
                 null,
                 2020,
                 "Германия");
-
-        System.out.println("марка автомобиля: " + audi.brand +
-                " Модель: " + audi.model +
-                " Объем двигателя " + audi.engineVolume +
-                " Цвет кузова: " + audi.color +
-                " Год выпуска: " + audi.productionYear +
-                " Страна производства: " + audi.productionCountry);
+        audi.setGears("Автомат");
 
 
         Car bmv = new Car("BMV",
@@ -37,14 +28,7 @@ public class Main {
                 "черный",
                 0,
                 "Германия");
-
-        System.out.println("марка автомобиля: " + bmv.brand +
-                " Модель: " + bmv.model +
-                " Объем двигателя " + bmv.engineVolume +
-                " Цвет кузова: " + bmv.color +
-                " Год выпуска: " + bmv.productionYear +
-                " Страна производства: " + bmv.productionCountry);
-
+        bmv.setSummerTyres(false);
 
 
         Car kia = new Car("KIA",
@@ -54,14 +38,6 @@ public class Main {
                 2018,
                 "Южная Корея");
 
-        System.out.println("Марка автомобиля: " + kia.brand +
-                " Модель " + kia.model +
-                " Объем двигателя " + kia.engineVolume +
-                " Цвет кузова: " + kia.color +
-                " Год выпуска:"  + kia.productionYear +
-                " Страна производства: " + kia.productionCountry);
-
-
 
         Car hyundai = new Car("Hyundai",
                 "Avante",
@@ -70,16 +46,24 @@ public class Main {
                 2016,
                 "Южная Корея");
 
-        System.out.println("Марка автомобиля " + hyundai.brand +
-                " Модель " + hyundai.model +
-                " Объем двигателя " + hyundai.engineVolume +
-                " Цвет кузова: " + hyundai.color +
-                " Год выпуска: " + hyundai.productionYear +
-                " Страна производства: " + hyundai.productionCountry);
+        printInfo(lada);
+        printInfo(audi);
+        printInfo(bmv);
+        printInfo(kia);
+        printInfo(hyundai);
+    }
 
-
-
-
-
+    private static void printInfo(Car car) {
+        System.out.println("Марка автомобиля " + car.getBrand() +
+                ", модель " + car.getModel() +
+                ", объем двигателя " + car.getEngineVolume() +
+                ", цвет кузова: " + car.getColor() +
+                ", год выпуска: " + car.getProductionYear() +
+                ", страна производства: " + car.getProductionCountry() +
+                ", коробка передач: " + car.getGears() +
+                ", тип кузова: " + car.getTypeOfBody() +
+                ", регистрационный номер: " + car.getRegNumber() +
+                ", количество мест: " + car.getSeatCount() +
+                ", " + (car.isSummerTyres() ? "летняя" : "зимняя") + " резина");
     }
 }
